@@ -1,0 +1,25 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1588976785598.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "AC61B05F",
+    "lastKnownWriteTime" : 1588978198,
+    "last_content_update" : 1588978198524,
+    "path" : "~/GitHub/CANV_movements/MovementAnalysis.R",
+    "project_path" : "MovementAnalysis.R",
+    "properties" : {
+        "cursorPosition" : "36,58",
+        "scrollLine" : "80"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

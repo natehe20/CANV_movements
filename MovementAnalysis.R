@@ -2,6 +2,7 @@
 ## updated 5/5/20
 ## N.Cook
 
+rm(list=ls())
 
 # General_variables -------------------------------------------------------
 # Enter the values here to name and draw from the correct folders
@@ -28,7 +29,7 @@ species <- "CANV" # Choose between CANV, MALL and WODU
 ## Set maindDir to folder with individual folders
 mainDir <- file.path("lux_files")
 
-setwd(mainDir)
+#setwd(mainDir)
 
 ## Read in CSV file with summary information
   #Columns needed Species, metal band number, sex, Turned.on.date,Date.of.Initial.fitting,
@@ -43,12 +44,12 @@ index.bird <- which(fileList %in% paste0(geo_df$Species,"_",geo_df$Metal))
 birdList <- fileList[index.bird]
 
 ## Check that geo_df and birdList have the same order - It just makes it easier for assumptions made later using unique ID
-
+i=1
 
 # Light_setup_process -----------------------------------------------------
 # Runs the first loop to get setup data for each bird
 {
-  require(TwGeos)
+  require(TwGeos)     # NOTE: must be installed from GitHub: devtools::install_github("SLisovski/TwGeos")
   for (i in 1:nrow(geo_df)) {
     #create file paths
     birdName <-fileList[index.bird[i]]
