@@ -558,19 +558,6 @@ run.FLightR.movement <- function(birdFold, passNum, birdList=fileList[index.bird
       plot_lon_lat(Result)
       dev.off()
       
-      # # Plot space utilization for specific range
-      # plot_util_distr(Result,
-      #                 dates = data.frame(tm[1],tm[7]),
-      #                 add.scale.bar=TRUE, percentiles=0.5)
-      
-      ## more specific plotting that I am working on
-      # stopover <- 5
-      # sRow <- statMigSum$Potential_stat_periods[stopover,1]
-      # eRow <- statMigSum$Potential_stat_periods[stopover,2]
-      
-      # UTIL <- plot_util_distr(Result,
-      # dates = data.frame(Proc.data$FLightR.data$twilights[sRow,1],Proc.data$FLightR.data$twilights[eRow,1]),
-      # add.scale.bar = TRUE, percentiles = 0.5, zoom = 5)
     },error = function(err) {
       runError <- c(runError,paste("error on",birdFold,"(birdNum=",birdNum,")",err))
       print(paste("MY_ERROR: ",birdFold,err))
