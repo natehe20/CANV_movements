@@ -380,14 +380,8 @@ run.FLightR.movement <- function(birdFold, passNum, birdList=fileList[index.bird
           runError <- c(runError,paste("warning on ",birdFold," (birdNum=",birdNum,") calibration period after first days of banding/still run",sep = ""))
         }
         
-        ## convert and write out the date to csv for FlightR format
-        TAGS.twilight.raw <- twGeos2TAGS(LUXdata,twlAuto,threshold)
-        TAGS.twilight.raw$datetime <- format(TAGS.twilight.raw$datetime, format = "%Y-%m-%d%T.000Z")
-        write.csv(TAGS.twilight.raw, file= file.path(moveDir,"FlightR_prep.csv"), quote=FALSE, row.names = FALSE)
-        
-        
         ## Read in csv and set some of the variables for recording on geolocator
-        Proc.data <- get.tags.data(file.path(moveDir,"FlightR_prep.csv"), saves="max", measurement.period = 60)
+        Proc.data <- get.tags.data(file.path("FlightR_prep.csv"), saves="max", measurement.period = 60)
         
         ## Calibration
         calibration.periods <- data.frame(
